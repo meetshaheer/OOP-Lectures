@@ -5,6 +5,7 @@ void main(List<String> arguments) {
   student1.address = "Malir Karachi";
   student1.age = 10;
   student1.course = "Flutter";
+  student1.dateOfAddmission = "2024";
 
   print(student1.course);
   print(student1.runtimeType);
@@ -16,4 +17,5 @@ class Student {
   String? address;
   int? age;
   String? course;
+  String? dateOfAddmission;
 }
