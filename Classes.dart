@@ -28,10 +28,7 @@ class Person {
 
   void areaCalculation() {
     try {
-      if (width == null) {
-        print("Width cannot be null");
-        width = 0;
-      }
+      width ??= 10;
       int area = width! * height!;
       print(area);
     } catch (e) {
