@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 void main(List<String> args) {
   ///
@@ -17,6 +18,8 @@ void main(List<String> args) {
   print(person.name);
 
   person.areaCalculation();
+  Myclass classs = Myclass();
+  classs.calculationArea();
 }
 
 class Person {
@@ -39,3 +42,23 @@ class Person {
 // In class we must use null operator because when class call at the time of compiling
 // it call all the variables which are declared in.
 // How to handle null safety and null check using try catch bloxk
+
+class Myclass {
+  double? area;
+  double? width;
+  double? height;
+
+  calculationArea() {
+    print("Enter Width");
+    width = double.parse(stdin.readLineSync()!);
+
+    try {
+      height ??= 10;
+      area = width! * height!;
+    } catch (e) {
+      print(e);
+    }
+
+    print(area);
+  }
+}
